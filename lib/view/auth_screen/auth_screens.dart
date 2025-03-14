@@ -277,6 +277,65 @@ class _AuthScreensState extends State<AuthScreens> {
                               ),
                             ],
                           ),
+                          CommonFunctions.blankSpace(height: height * 0.01),
+                          Container(
+                            width: double.infinity,
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 16.0),
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    amber, // Yellow color from image
+                                foregroundColor: Colors.black, // Text color
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 14.0),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(4.0),
+                                ),
+                                elevation: 0, // No shadow
+                              ),
+                              child: const Text(
+                                'Continue',
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                          ),
+                          CommonFunctions.blankSpace(width: width * 0.02), // F
+                          RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text:
+                                      'By continuing, you agree to Amazon\'s ',
+                                  style:
+                                      Theme.of(context).textTheme.labelMedium,
+                                ), // Closing TextSpan
+                                TextSpan(
+                                  text: 'Conditions of use ',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .labelMedium!
+                                      .copyWith(color: blue),
+                                ),
+                                TextSpan(
+                                    text: 'and ',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .labelMedium!),
+                                TextSpan(
+                                  text: 'Privacy Notice ',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .labelMedium!
+                                      .copyWith(color: blue),
+                                ), ////
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     )
